@@ -1880,7 +1880,7 @@
     react-redux "8.1.1"
     yup "0.32.9"
 
-"@strapi/plugin-upload@4.24.2":
+"@strapi/plugin-upload@4.24.2", "@strapi/plugin-upload@^4.24.2":
   version "4.24.2"
   resolved "https://registry.yarnpkg.com/@strapi/plugin-upload/-/plugin-upload-4.24.2.tgz#2549cf7e7547fe85112979b1ef748b3a6731f0b1"
   integrity sha512-S7XyLYDlIlRXLfSXO3lQL3dIEtEIsvoKm/SVSWVDPALaahZt0s2fgiWZsXl/G1Sr0wi/atDHEKLqExTOTtRxvw==

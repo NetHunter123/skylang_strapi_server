@@ -1,0 +1,87 @@
+{
+  "kind": "collectionType",
+  "collectionName": "courses",
+  "info": {
+    "singularName": "course",
+    "pluralName": "courses",
+    "displayName": "Course",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "integer",
+      "required": true
+    },
+    "level": {
+      "type": "enumeration",
+      "enum": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "required": true
+    },
+    "recruitment": {
+      "type": "enumeration",
+      "enum": [
+        "open",
+        "close"
+      ],
+      "required": true,
+      "private": true
+    },
+    "desc": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "duration": {
+      "type": "string",
+      "required": true,
+      "unique": false,
+      "regex": "^\\d{1,2}\\sміс\\.$"
+    },
+    "start_date": {
+      "type": "date",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "individual",
+        "group"
+      ],
+      "required": true
+    },
+    "teachers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::teacher.teacher"
+    },
+    "language": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::language.language"
+    }
+  }
+}
